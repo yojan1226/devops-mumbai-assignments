@@ -1,0 +1,11 @@
+LoRaWAN is a low-power,
+ wide-area networking (LPWAN) 
+ protocol specifically
+  designed for long-range,
+   low-bandwidth communication between devices and the internet, making it ideal for Internet of Things (IoT) applications. It's a cloud-based middleware layer that manages communication between LoRa-enabled
+    devices and application servers.
+    namaskar
+    namaskar
+    namaskarnamaskar
+    namaskar
+    namaskar 
