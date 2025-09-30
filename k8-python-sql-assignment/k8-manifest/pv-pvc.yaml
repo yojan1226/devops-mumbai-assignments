@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mysql
+  namespace: python-sql-demo
+spec:
+  capacity:
+    storage: 1Gi             # Size of the volume
+  accessModes:
+    - ReadWriteOnce          # Pod on a single node can read/write
+  persistentVolumeReclaimPolicy: Retain   # Keep data after PVC is deleted
+  storageClassName: manual   # Storage class name (for binding with PVC)
+  hostPath:
+    path: "/mnt/data/mysql"        # Directory on the node
+
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-mysql
+  namespace: python-sql-demo
+spec:
+  accessModes:
+    - ReadWriteOnce          # Must match PV
+  resources:
+    requests:
+      storage: 1Gi           # Request same size as PV
+  storageClassName: manual   # Must match PV
