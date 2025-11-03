@@ -1,0 +1,3 @@
+[myec2]
+15.206.74.22 ansible_user=ec2-user ansible_private_key_file=~/.ssh/demo1.pem ansible_python_interpreter=/usr/bin/python3
+

@@ -1,0 +1,11 @@
+---
+- name: run a script
+  hosts: myec2
+  become: true
+
+  tasks:
+  - name: Run script
+    shell: /home/ec2-user/script.sh >> test.log
+    args: 
+      chdir: /home/ec2-user
+      creates: test.log

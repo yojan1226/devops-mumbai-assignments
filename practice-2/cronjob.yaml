@@ -1,0 +1,16 @@
+---
+- name: Cron setup
+  hosts: myec2
+  become: true
+
+  tasks:
+  - name: Add Cron Job
+    cron:
+      name: run Test script
+      minute: "20"
+      hour: "3"
+      day: "15"
+      month: "*"
+      weekday: "*"
+      user: ec2-user
+      job: "/home/ec2-user/script.sh"

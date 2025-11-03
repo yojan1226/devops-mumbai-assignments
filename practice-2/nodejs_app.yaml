@@ -1,0 +1,38 @@
+---
+- name: Setup Node.js application on EC2
+  hosts: myec2
+  become: true
+
+
+  tasks:
+    - name: Update package repository
+      yum:
+        name: "*"
+        state: latest
+
+    - name: Install Node.js and Git
+      shell: |
+        curl -sL https://rpm.nodesource.com/setup_16.x | bash -
+        yum install -y nodejs git
+      args:
+        executable: /bin/bash
+
+    - name: Clone Git repository
+      git:
+        repo: "https://github.com/priyabuss2004/node-app.git"
+        dest: /home/ec2-user/node-app
+        version: main
+        force: yes
+
+    - name: Install npm packages
+      npm:
+        path: /home/ec2-user/node-app
+        production: no
+
+    - name: Start the Node.js app
+      shell: |
+        cd /home/ec2-user/node-app
+        npm start
+      args:
+        chdir: /home/ec2-user/node-app
+        executable: /bin/bash
