@@ -5,6 +5,7 @@ This repository contains all my DevOps assignments organized topic-wise using br
 Each topic has its own dedicated branch:
 
 📌 Branch Structure
+
 🐳 Docker Assignment
 
 Branch: docker
@@ -20,6 +21,7 @@ Multi-stage builds
 
 Docker Compose
 
+
 ☸️ Kubernetes Assignment
 
 Branch: kubernetes
@@ -32,6 +34,7 @@ Services (ClusterIP, NodePort, LoadBalancer)
 ConfigMaps & Secrets
 
 Ingress, HPA, StatefulSets
+
 
 🌍 Terraform Assignment
 
@@ -46,6 +49,7 @@ EKS cluster
 
 Terraform modules & variables
 
+
 ⚙️ Ansible Assignment
 
 Branch: ansible
@@ -58,6 +62,7 @@ Inventories
 Roles & Handlers
 
 Remote server configuration
+
 
 🖥️ Bash Scripting Assignment
 
@@ -74,6 +79,7 @@ File handling
 
 Automation scripts
 
+
 🔀 How to Switch to a Branch
 On GitHub:
 
@@ -82,6 +88,7 @@ Click the Branch dropdown (top-left)
 Select the topic branch you want
 
 Using Git:
+
 git checkout docker
 git checkout kubernetes
 git checkout terraform
