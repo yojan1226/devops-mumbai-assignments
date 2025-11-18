@@ -90,9 +90,13 @@ Select the topic branch you want
 Using Git:
 
 git checkout docker
+
 git checkout kubernetes
+
 git checkout terraform
+
 git checkout ansible
+
 git checkout bash-scripting
 
 🎯 Purpose of This Repository
